@@ -1,5 +1,4 @@
 #include <iostream>
-#include <gtk/gtk.h>
 #include "game.hpp"
 
 using namespace std;
@@ -242,13 +241,3 @@ void mv_board(Tile_t *board[4][4], int direction) {
 		}
 	}
 };
-
-int main() {
-	Tile_t *board[4][4] = tiles;
-	mk_board(board);
-
-	bool win = false;
-	while (!win) {
-
-	}
-}
