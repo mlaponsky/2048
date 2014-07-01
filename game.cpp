@@ -1,27 +1,8 @@
-#include <ctime>
 #include <iostream>
-#include <cstdio>
-#include <cstdlib>
-#include <random>
 #include <gtk/gtk.h>
+#include "game.hpp"
+
 using namespace std;
-
-enum {LEFT = -1, RIGHT = 1, UP = -2, DOWN = 2};
-enum {ROW_MIN = 0, ROW_MAX = 4, COL_MIN = 0, COL_MAX = 4};
-
-
-//The board structure: A 4x4 array of tiles, with pointers to tiles in all other directions.
-struct Tile_t {
-	int val;
-	int row;
-	int col;
-	int id_num;
-	Tile_t *left;
-	Tile_t *right;
-	Tile_t *up;
-	Tile_t *down;
-	Tile_t *next;
-} tiles[4][4];
 
 //Maps coordinates to a linear id number 0-15.
 int coord_map(int row, int col) {
@@ -261,9 +242,6 @@ void mv_board(Tile_t *board[4][4], int direction) {
 		}
 	}
 };
-
-
-
 
 int main() {
 	Tile_t *board[4][4] = tiles;
