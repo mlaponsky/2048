@@ -7,6 +7,17 @@
 #include <cstdlib>
 #include <random>
 
+
+/*
+This header file contains all constants, structs and function prototypes for the game mechanics. It contains all of the necessary material to:
+   - Make the game board.
+   - Initialize the board.
+   - Add new random tiles.
+   - Shift and combine rows and columns.
+The actual execution of the game will be done in the main.cpp file, and the GUI in gui.cpp. All algorithms for solving the game can be found in solution.cpp.
+*/
+
+
 //Declare constants for board manipulation.
 enum {LEFT = -1, RIGHT = 1, UP = -2, DOWN = 2};
 enum {ROW_MIN = 0, ROW_MAX = 4, COL_MIN = 0, COL_MAX = 4};
@@ -24,7 +35,7 @@ struct Tile_t {
   Tile_t *next;
 } tiles[4][4];
 
-//Function Prototypes.
+//Function prototypes.
 int coord_map(int row, int col);
 int new_tile_val();
 void fill_new_tile(Tile_t *board[4][4]);

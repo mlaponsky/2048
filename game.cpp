@@ -3,6 +3,10 @@
 
 using namespace std;
 
+
+//The guts of all functions needed to make board and the mechanics of a move being made.
+
+
 //Maps coordinates to a linear id number 0-15.
 int coord_map(int row, int col) {
 	return 4*row + col;
