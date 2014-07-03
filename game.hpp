@@ -1,6 +1,6 @@
 //game.h
 
-#ifndef__GAME_H_INCLUDED__
+#ifndef __GAME_H_INCLUDED__
 #define __GAME_H_INCLUDED__
 
 #include <cstdio>
